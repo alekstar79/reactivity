@@ -12,7 +12,7 @@
 > Production-ready reactive system inspired by Vue 3. Includes memoization, cycle dependency management, subscription cleanup, effect lifecycle, and complete TypeScript typing.
 
 <!-- TOC -->
-* [Reactivity (Vue 3 like reactivity)](#reactivity-vue-3-like-reactivity)
+* [⚡ Reactivity (Vue3-like reactivity)](#-reactivity-vue3-like-reactivity)
   * [🎯 Features](#-features)
   * [📦 Installation](#-installation)
   * [🚀 Quick Start](#-quick-start)
