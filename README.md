@@ -1,4 +1,4 @@
-# Reactivity (Vue3-like reactivity)
+# ⚡ Reactivity (Vue3-like reactivity)
 
 [![NPM](https://img.shields.io/npm/v/@alekstar79/reactivity.svg)](https://www.npmjs.com/package/@alekstar79/reactivity)
 [![GitHub repo](https://img.shields.io/badge/github-repo-green.svg?style=flat)](https://github.com/alekstar79/reactivity)
