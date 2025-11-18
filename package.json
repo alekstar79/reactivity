@@ -1,0 +1,98 @@
+{
+  "name": "@alekstar79/reactivity",
+  "version": "1.0.0",
+  "description": "Production-ready reactive system similar to Vue 3",
+  "license": "MIT",
+  "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
+  "type": "module",
+  "private": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./reactivity": {
+      "types": "./dist/reactivity.d.ts",
+      "import": "./dist/reactivity.mjs",
+      "require": "./dist/reactivity.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "examples",
+    "src",
+    "package.json",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+
+    "build": "npm run build:lib && npm run build:demo",
+    "build:lib": "node build-lib.js",
+    "build:demo": "node build-demo.js",
+
+    "clean": "npm run clean:lib && npm run clean:demo",
+    "clean:lib": "rimraf dist",
+    "clean:demo": "rimraf demo",
+
+    "type-check": "tsc --noEmit",
+
+    "example:basic": "tsx examples/node-basic.ts",
+    "example:advanced": "tsx examples/node-advanced.ts",
+    "example:effect-scope": "tsx examples/node-effect-scope.ts",
+    "example:all": "npm run example:basic && npm run example:advanced && npm run example:effect-scope",
+
+    "demo:serve": "serve demo -p 3000",
+    "demo:dev": "npm run build:demo && npm run demo:serve",
+
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watch",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage",
+    "test:debug": "cross-env NODE_ENV=test node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+
+    "prepublishOnly": "npm run test && npm run build:lib",
+    "prepare": "npm run build:lib",
+    "release": "npm run test && npm run build:lib && npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "cross-env": "^10.1.0",
+    "esbuild": "^0.27.0",
+    "jest": "^30.2.0",
+    "rimraf": "^5.0.0",
+    "serve": "^14.2.5",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "reactivity",
+    "watch",
+    "reactive",
+    "effect",
+    "computed",
+    "ref",
+    "typescript",
+    "browser",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekstar79/reactive-watch-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alekstar79/reactive-watch-system/issues"
+  },
+  "homepage": "https://github.com/alekstar79/reactive-watch-system#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
