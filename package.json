@@ -86,12 +86,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alekstar79/reactive-watch-system.git"
+    "url": "git+https://github.com/alekstar79/reactivity.git"
   },
   "bugs": {
-    "url": "https://github.com/alekstar79/reactive-watch-system/issues"
+    "url": "https://github.com/alekstar79/reactivity/issues"
   },
-  "homepage": "https://github.com/alekstar79/reactive-watch-system#readme",
+  "homepage": "https://github.com/alekstar79/reactivity#readme",
   "engines": {
     "node": ">=20.0.0"
   }
