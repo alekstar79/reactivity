@@ -1,6 +1,6 @@
 {
   "name": "@alekstar79/reactivity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-ready reactive system similar to Vue 3",
   "license": "MIT",
   "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
